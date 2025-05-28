@@ -179,7 +179,7 @@ header {
   transition: 0.2s all linear;
 }
 
-/* Catálogo */
+/* Main */
 
 .heading {
   padding: 80px 10px 10px 10px;
@@ -243,4 +243,155 @@ header {
 
 .coming-container .box {
   width: 100px;
+}
+
+/* Rodapé */
+
+/* Newsletter */
+
+.newsletter {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 10px 40px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+}
+
+.newsletter h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.newsletter form {
+  background: var(--bg-color);
+  padding: 10px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.newsletter form input {
+  border: none;
+  outline: none;
+}
+
+.newsletter form .email {
+  width: 280px;
+}
+
+.newsletter form input::placeholder {
+  color: var(--text-color);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.newsletter .btn {
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 10px 30px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.social .bx {
+  background: var(--bg-color);
+  padding: 2px;
+  font-size: 2rem;
+  border-radius: 50%;
+  border: 4px solid rgb(2, 3, 7, 0.4);
+  color: var(--main-color);
+}
+
+.social .bx:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
+  transition: 0.2s all linear;
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 18px 4%;
+  }
+  .navbar {
+    column-gap: 2rem;
+  }
+  section {
+    padding: 50px 4%;
+  }
+  .home-text h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 774px) {
+  #menu-icon {
+    display: initial;
+    color: var(--bg-color);
+    margin-left: 6vw;
+  }
+
+  .navbar {
+    position: absolute;
+    top: -570px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+    row-gap: 1.4rem;
+    padding: 20px;
+    box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
+    transition: 0.2s all linear;
+    text-align: center;
+  }
+  .navbar a {
+    width: 100%;
+    color: var(--text-color);
+  }
+
+  .navbar a:hover {
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+  }
+
+  .navbar a::after {
+    display: none;
+  }
+
+  .navbar.active {
+    top: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .home-text {
+    padding: 355px 10px 10px 30px;
+  }
+  .home-text h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 0.7rem 1rem;
+  }
 }
