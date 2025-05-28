@@ -41,6 +41,19 @@ header {
   background: var(--head-back);
 }
 
+header.shadow {
+  background: var(--bg-color);
+  box-shadow: 0 0 4px rgb(14 55 54 / 15%);
+}
+
+header.shadow .navbar a {
+  color: var(--text-color);
+}
+
+header.shadow .logo {
+  color: var(--text-color);
+}
+
 .logo {
   font-size: 1.1rem;
   font-weight: 600;
@@ -48,6 +61,10 @@ header {
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
+}
+
+.logo:focus {
+  outline: none;
 }
 
 .logo .bx {
@@ -350,6 +367,10 @@ footer {
     margin-left: 6vw;
   }
 
+  header.shadow #menu-icon {
+    color: var(--text-color);
+  }
+
   .navbar {
     position: absolute;
     top: -570px;
@@ -381,6 +402,10 @@ footer {
   .navbar.active {
     top: 100%;
   }
+
+  .movies-container {
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+  }
 }
 
 @media (max-width: 560px) {
@@ -393,5 +418,15 @@ footer {
 
   .btn {
     padding: 0.7rem 1rem;
+  }
+
+  .newsletter form .email {
+    width: auto;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
   }
 }
